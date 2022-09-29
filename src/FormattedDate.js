@@ -2,13 +2,14 @@ import { getByDisplayValue } from "@testing-library/react";
 import React from "react";
 
 export default function FormattedDate(props) {
- let days = ["Sunday",
+  let days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[props.date.getDay()];
   let hours = props.date.getHours();
@@ -20,8 +21,8 @@ export default function FormattedDate(props) {
     hours = `0${hours}`;
   }
   return (
-  <div>
-    {day} {hours}:{minutes}
-  </div>
+    <div>
+      {day} {hours}:{minutes}
+    </div>
   );
 }
